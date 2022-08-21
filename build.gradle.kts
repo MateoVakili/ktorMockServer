@@ -1,6 +1,7 @@
 val ktorVersion: String by project
 val kotlinVersion: String by project
 val logbackVersion: String by project
+val commonsCodecVersion: String by project
 
 plugins {
     application
@@ -36,8 +37,9 @@ dependencies {
     // kotlin
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 
-    // log
+    // util
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("commons-codec:commons-codec:$commonsCodecVersion")
 
     // db
     implementation("org.jetbrains.exposed:exposed-core:0.38.2")
@@ -46,6 +48,4 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-java-time:0.38.2")
     implementation("org.postgresql:postgresql:42.3.6")
     implementation("com.zaxxer:HikariCP:5.0.1")
-
-
 }
